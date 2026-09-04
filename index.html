@@ -143,12 +143,19 @@
     .hero-title { margin-bottom: 1.2rem; }
     .hero-sub { margin-bottom: 2.5rem; }
     .hero-actions { gap: 1rem; }
+    .hero-top, .hero-bottom { display: contents; }
+    .hero-spacer { display: none; }
     @media (max-width: 768px) {
       .hero-inner { padding-top: 80px; }
-      .eyebrow-badge { margin-bottom: 3.5rem; }
-      .hero-title { margin-bottom: 2.5rem; }
-      .hero-sub { margin-bottom: 4rem; }
-      .hero-actions { gap: 1.2rem; }
+      .hero { align-items: stretch; }
+      .hero-inner { display: flex; flex-direction: column; justify-content: flex-start; min-height: 100dvh; padding-top: 80px; padding-bottom: 6rem; }
+      .hero-top { display: block; margin-top: 6vh; }
+      .hero-bottom { display: block; margin-top: 32vh; }
+      .eyebrow-badge { margin-bottom: 2.2rem; }
+      .hero-title { margin-bottom: 1.6rem; }
+      .hero-sub { margin-bottom: 2.2rem; }
+      .hero-actions { gap: 1rem; }
+      .scroll-hint { bottom: 1.8rem; }
     }
     .eyebrow-badge.gold { color: var(--gold); background: rgba(245,176,65,0.12); border-color: rgba(245,176,65,0.35); }
     .hero-title {
@@ -325,15 +332,19 @@
     </div>
     <div class="hero-inner">
       <div class="wrap">
-        <span class="eyebrow-badge gold">🏆 2026 World Champion · Calisthenics</span>
-        <h1 class="hero-title">
-          Rayan
-          <span class="kanji">天堂龍 · ONIZUKA</span>
-        </h1>
-        <p class="hero-sub">Professional calisthenics athlete redefining human gravity &amp; movement — coach, creator and Team France representative on the world stage.</p>
-        <div class="hero-actions">
-          <a href="mailto:contact@onizuka.com" class="bio-btn primary">Coaching <span>★</span></a>
-          <a href="https://shop.caliathletics.com" target="_blank" rel="noopener noreferrer" class="bio-btn gold">Shop Now <span>→</span></a>
+        <div class="hero-top">
+          <span class="eyebrow-badge gold">🏆 2026 World Champion · Calisthenics</span>
+          <h1 class="hero-title">
+            Rayan
+            <span class="kanji">天堂龍 · ONIZUKA</span>
+          </h1>
+        </div>
+        <div class="hero-bottom">
+          <p class="hero-sub">Professional calisthenics athlete redefining human gravity &amp; movement — coach, creator and Team France representative on the world stage.</p>
+          <div class="hero-actions">
+            <a href="mailto:contact@onizuka.com" class="bio-btn primary">Coaching <span>★</span></a>
+            <a href="https://shop.caliathletics.com" target="_blank" rel="noopener noreferrer" class="bio-btn gold">Shop Now <span>→</span></a>
+          </div>
         </div>
       </div>
     </div>
@@ -365,7 +376,7 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div class="section-tag">02 · Connect</div>
-        <h2 class="section-title">Shop &amp; <span class="accent">Instagram</span>.</h2>
+        <h2 class="section-title">Caliathletics <span class="accent">Shop</span>.</h2>
       </div>
       <div class="shop-grid">
         <a href="https://shop.caliathletics.com" target="_blank" rel="noopener noreferrer" class="shop-card reveal d1">
